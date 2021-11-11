@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
+$backgroundBase: #20b2aa;
+$shadow: 1px 1px 5px 2px
+  darken($backgroundBase, 20%);
+$borderDefault: 1px solid
+  darken($backgroundBase, 50%);
+
+body {
+  background-color: $backgroundBase;
+  font-family: "Zen Kurenaido", sans serif;
+}
+
+.colorScheme {
+  background-color: 
+    lighten($backgroundBase, 40%);
+    border: $borderDefault;
+    box-shadow: $shadow;
+}
+
+.toolbar {
+  color: Black;
+  font-size: 1.5em;
+  margin-bottom: 2px;
+  border: $borderDefault;
+  box-shadow: $shadow;
+  padding: 1px;
+  background-color: 
+    darken($backgroundBase, 15%);
+  i {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .fa-arrows-alt,
+  .fa-compress {
+    float: right;
+    padding-top: 5px;
+  }  
+}
+
+.fa-compress, .fa-arrows-alt {
+  &:hover {
+    color: lighten(black, 90%);
+    cursor: pointer;
+  }
+}
+
+.editorWrap {
+  max-width: 600px;
+  margin: 10px;
+  
+  .toolbar {
+    width: 99%;
+    
+  }
+  
+  textarea {
+    width: 99%;
+    @extend .colorScheme;
+    min-height: 200px;
+    resize: vertical;
+    margin-bottom: -5px;
+  }
+}
+
+
+
+.previewWrap {
+  max-width: 800px;
+  margin: 10px;
+}
+
+#preview {
+  @extend .colorScheme;
+  padding: 5px;
+  img {
+  display: block;
+  max-width: 90%;
+  
+}
+}
+
+.hide {
+  display: none;
+}
+
+.maximized {
+  width: 96%;
+  min-height: 100vh;
+  margin: auto;
+  textarea {
+    min-height: 95vh;
+    resize: none;
+  }
+}
+

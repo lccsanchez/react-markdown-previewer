@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap");
+body {
+  background-color: #20b2aa;
+  font-family: "Zen Kurenaido", sans serif;
+}
+
+.colorScheme, #preview, .editorWrap textarea {
+  background-color: #aef0ed;
+  border: 1px solid black;
+  box-shadow: 1px 1px 5px 2px #105c57;
+}
+
+.toolbar {
+  color: Black;
+  font-size: 1.5em;
+  margin-bottom: 2px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 5px 2px #105c57;
+  padding: 1px;
+  background-color: #14716c;
+}
+.toolbar i {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.toolbar .fa-arrows-alt,
+.toolbar .fa-compress {
+  float: right;
+  padding-top: 5px;
+}
+
+.fa-compress:hover, .fa-arrows-alt:hover {
+  color: #e6e6e6;
+  cursor: pointer;
+}
+
+.editorWrap {
+  max-width: 600px;
+  margin: 10px;
+}
+.editorWrap .toolbar {
+  width: 99%;
+}
+.editorWrap textarea {
+  width: 99%;
+  min-height: 200px;
+  resize: vertical;
+  margin-bottom: -5px;
+}
+
+.previewWrap {
+  max-width: 800px;
+  margin: 10px;
+}
+
+#preview {
+  padding: 5px;
+}
+#preview img {
+  display: block;
+  max-width: 90%;
+}
+
+.hide {
+  display: none;
+}
+
+.maximized {
+  width: 96%;
+  min-height: 100vh;
+  margin: auto;
+}
+.maximized textarea {
+  min-height: 95vh;
+  resize: none;
+}
